@@ -1,8 +1,8 @@
-# Static Webpage deployment
+# Static Website Deployment with Terraform
 
-This project is built to help you deploy a _static webpage_ using Terraform for Infrastructure as Code (IaC).
+This project is built to help you deploy a **static webpage** using Terraform for Infrastructure as Code (IaC).
 
-## Project building requirements
+## Project Building Requirements
 
 The deployed website must be:
 
@@ -11,7 +11,7 @@ The deployed website must be:
 -   Cost-effective
 -   Fast loading
 
-## Proposed solution
+## Proposed Solution
 
 ### Components
 
@@ -22,7 +22,7 @@ We will create a static website using the following AWS resources:
 This service will allow us to **scale** the user requests, a **fast loading** and will allow the website to be **highly available**.
 Also, it will allow us to accept **HTTPS** requests for data encryption in transit.
 
-#### S3 bucket as static website
+#### S3 Bucket as Static Website
 
 Will be a **cost-effective** solution to store the HTML, CSS, and JS files. It will **scale** in relation to user requests.
 
@@ -34,7 +34,7 @@ With both services, the maintenance and management will be minimal, as CloudFron
 
 ![Architecture Diagram](assets/architecture-diagram.png)
 
-### Key aspects of the project
+### Key Aspects of The Project
 
 #### State Storage
 
@@ -59,7 +59,7 @@ With both services, the maintenance and management will be minimal, as CloudFron
 
 ## Deployment Steps
 
-### Deploy the infrastructure
+### Deploy the Infrastructure
 
 1. Initialize terraform.
    Inside the `terraform` folder execute:
@@ -104,7 +104,7 @@ terraform output
 
 Once your infrastructure is built, upload the HTML code to your bucket.
 
-#### Example webpage
+#### Example Webpage
 
 For example purposes, a NextJS basic page is configured in folder `nextjs-page`.
 You need to execute the following commands in the folder `nextjs-page` with npm installed.
@@ -126,7 +126,7 @@ npm run build
 A new folder will be created with name `out`. The folder structure is as follows.
 ![Next.js output structure](assets/nextjs-out-folder.png)
 
-#### Upload the webpage
+#### Upload the Webpage
 
 In the project's root folder, execute the following command.
 
@@ -151,7 +151,7 @@ You can use Terraform:
 terraform destroy
 ```
 
-## Improvements / To-Do list
+## Improvements / To-Do List
 
 -   [ ] Add a pipeline for automated website upload.
 -   [ ] Create more variables to more deployment customization.
