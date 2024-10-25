@@ -1,0 +1,15 @@
+terraform {
+  backend "s3" {
+    bucket         = "<your bucket name>"
+    key            = "<name of the .tfstate file>"
+    region         = "<aws region you use>"
+    dynamodb_table = "<dynamodb table name>"
+    # Optional:
+    profile = "<if you are using an AWS configured profile>"
+  }
+}
+
+provider "aws" {
+  profile = "<the AWS profile to use>"
+  region  = "<region where you will deploy>"
+}
