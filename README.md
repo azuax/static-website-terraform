@@ -124,6 +124,7 @@ npm run build
 ```
 
 A new folder will be created with name `out`. The folder structure is as follows.
+
 ![Next.js output structure](assets/nextjs-out-folder.png)
 
 #### Upload the Webpage
